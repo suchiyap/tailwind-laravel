@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-5 bg-green-500 text-white font-medium rounded-full hover:bg-green-100 hover:text-black focus:bg-green-900 focus:text-white;
+  }
+
+  .btn-secondary{
+    @apply py-2 px-5 bg-white text-black border border-solid border-black font-medium rounded-full hover:bg-gray-500 hover:text-white hover:border-none focus:bg-black focus:text-white focus:border-none;
+  }
+
+  .badge{
+    @apply px-3 py-2 bg-black text-green-100 rounded-full font-bold drop-shadow-lg hover:bg-green-100 hover:text-black;
+  }
+
+  .fav-icon{
+    @apply w-10 h-10 bg-fav-def hover:bg-fav-hov bg-center bg-no-repeat bg-contain cursor-pointer;
+  }
+
+  .fav-icon-no-shadow{
+    @apply w-10 h-10 bg-fav-def-no-shadow hover:bg-fav-hov bg-center bg-no-repeat bg-contain cursor-pointer;
+  }
+
+  .fav-icon-no-shadow.active{
+    @apply w-10 h-10 bg-fav-active bg-center;
+  }
+
+  .fav-icon.active{
+    @apply w-10 h-10 bg-fav-active bg-center;
+  }
+
+  .accordion-title{
+    @apply relative w-full text-start before:content-[''] before:bg-angle-up before:bg-no-repeat before:absolute before:w-5 before:h-5 before:end-0 before:top-1/2 before:-translate-y-1/2
+  }
+
+  .accordion-title.no-show{
+    @apply relative w-full text-start before:content-[''] before:bg-angle-down before:bg-no-repeat before:absolute before:w-5 before:h-5 before:end-0 before:top-1/2 before:-translate-y-1/2
+  }
+
+  .event-tab button.active{
+    @apply bg-gray-250 text-black border-green-500
+  }
+}
+
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
